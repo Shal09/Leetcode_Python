@@ -1,0 +1,15 @@
+from collections import defaultdict
+
+class Solution(object):
+    def groupAnagrams(self, strs):
+    
+        # Initialize a defaultdict to store lists of anagrams
+        dicta = defaultdict(list)
+        
+        # Iterate through each string in the input list
+        for ana in strs:
+            # Sort the string and use it as the key
+            key = "".join(sorted(ana))
+            
+            # Append the string to the list corresponding to the key
+            dicta[key].append(ana)
