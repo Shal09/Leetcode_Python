@@ -1,0 +1,9 @@
+class Solution(object):
+    def maximumCount(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        a = sum(x>0 for i in nums)
+        b = sum(x<0 for i in nums)
+        return max(a,b)
