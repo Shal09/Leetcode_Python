@@ -1,0 +1,11 @@
+class Solution(object):
+    def countDigits(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        count, x = 0, num
+        while x:
+            x, rem = divmod(x, 10)
+            count += num % rem  == 0
+        return count
