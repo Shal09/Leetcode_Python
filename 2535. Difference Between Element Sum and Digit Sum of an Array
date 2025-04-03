@@ -1,0 +1,9 @@
+class Solution(object):
+    def differenceOfSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        elementsum = sum(nums)
+        digitsum = sum(int(digit) for digit in "".join(map(str, nums)))
+        return abs(elementsum - digitsum)
