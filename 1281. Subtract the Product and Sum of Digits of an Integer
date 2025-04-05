@@ -1,0 +1,12 @@
+class Solution(object):
+    def subtractProductAndSum(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        digits  = [int(digit) for digit in str(n)]
+        add = sum(digits)
+        product = 1
+        for digit in digits:
+            product *= digit
+        return product - add
